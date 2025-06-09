@@ -1,115 +1,59 @@
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
 
-#include <iostream>
-using namespace std;
+#include "item.h"
 
 
-class Item{
-    private:
-        string Nombre;
-        bool Stack;
-        bool Durabilidad;
+class Inventario {
+private:
+    int espaciosTotales;
+    vector<Item*> Items;
 
-    public:
-        Item();
-        Item(string nom, bool st, bool Dura);
-        void setNombre(string n);
-        //virtual void setStack(bool s);
-        void setDurabilidad(bool d);
-        string getNombre();
-        virtual int getStack();
-        int getDurabilidad();
+public:
+    Inventario(int espacios = 10);
+
+    void agregarItem(Item* item);
+    void eliminarItem(string nombre);
+    void verItems();
+    Item* buscarItem(string nombre);
+};
+
+Inventario::Inventario(int espacios) : espaciosTotales(espacios) {}
+
+void Inventario::agregarItem(Item* item) {
+    if ((int)Items.size() < espaciosTotales) {
+        Items.push_back(item);
+    } else {
+        cout << "Inventario lleno." << endl;
+    }
 }
 
-Item::Item(){
-    Nombre = "Item random";
-    Stack = 0;
-    Durabilidad = 0;
+void Inventario::eliminarItem(string nombre) {
+    for (auto i = Items.begin(); i != Items.end(); ++i) {
+        if ((*i)->getNombre() == nombre) {
+            delete *i;
+            Items.erase(i);
+            break;
+        }
+    }
 }
 
-Item::Item(string nom, bool st, bool Dura){
-    Nombre = nom;
-    Stack = st;
-    Durabilidad = Dura;
+void Inventario::verItems() {
+    for (Item* item : Items) {
+        item->verItem();
+    }
 }
 
-void Item::setNombre(string n){
-    Nombre = n;
+Item* Inventario::buscarItem(string nombre) {
+    for (Item* item : Items) {
+        if (item->getNombre() == nombre) {
+            return item;
+        }
+    }
+    cout << "No ingreso el nombre bien." << endl;
+    return nullptr;
 }
 
-/*void Item::setStack(bool s){
-    Stack = s;
-}*/
-
-void Item::setDurabilidad(bool d){
-    Durabilidad = d;
-}
-
-string Item::getNombre(){
-    return Nombre;
-}
-
-virtual int Item::getStack(){
-    return Stack;
-}
-
-int Item::getDurabilidad(){
-    return Durabilidad;
-}
-
-
-
-class Herramienta : public Item{
-    private:
-        int Dano;
-
-    public:
-        Herramienta();
-        Herramienta(int da);
-        void setDano(int d);
-        int getDano();
-}
-
-Herramienta::Herramienta(){
-    Dano = 1;
-}
-
-Herramienta::Herramienta(int da){
-    Dano = da;
-}
-
-class Armadura : public Item{
-    private:
-        string Tipo;
-        int Defensa;
-
-    public:
-        Armadura();
-        Armadura(string t,int de);
-        void setTipo(string t);
-        string getTipo();
-        void setDefensa(int d);
-        int getDefensa();
-}
-
-Armadura::Armadura(){
-    Tipo = "Peto";
-    Defensa = 30;
-}
-
-Armadura::Armadura(string t,int de){
-    Tipo = t;
-    Defensa = de;
-}
-
-void Armadura::setTipo(string t){
-    Tipo = t;
-}
-
-string Armadura::getTipo(){
-    return 
-}
-
+#endif
 
 
