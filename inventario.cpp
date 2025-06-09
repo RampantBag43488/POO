@@ -1,4 +1,8 @@
 #include "inventario.h" 
+#include "armadura.h"
+#include "herramienta.h"
+#include "consumible.h"
+#include "bloque.h"
 
 void menu() {
     cout << "\n--- MENU DEL INVENTARIO ---\n";
