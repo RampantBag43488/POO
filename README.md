@@ -18,7 +18,7 @@ Inventario contiene una colección de Items (Agregación).
 El código despliega un menú donde agregar, eliminar y ver todos los items en el inventario o solo uno por busqueda de nombre, se puede crear un nuevo item a la hora de agregarlo.
 El programa corre tanto en la consola como en visual studio code(con las extensiones necesarias instaladas y MinGW) y está hecho con c++ standard por lo que corre en todos los sistemas operativos.
 
-compilar en consola con: "g++ inventario.cpp" (esto teniendo todos los archivos .h y el .cpp en el escritorio y habriendo desde alli la consola).
+compilar en consola con: "g++ inventario.cpp" (esto teniendo todos los archivos .h y el .cpp en la misma carpeta y habriendo desde alli la consola).
 
 correr en windows: "./a.exe"
 
