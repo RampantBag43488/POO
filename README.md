@@ -25,3 +25,5 @@ correr en windows: "./a.exe"
 1. Se agrego todo el codigo faltante para estar completo y que corra, esto incluyendo clases faltantes y el archivo .cpp.
 2. Se separaron las clases en distintos archivos .h para que se vea mas limpio.
 3. Algunos "#include" se aplican solo una vez, ya que estos llegan a los otros archivos con la agregacion del archivo anterior.
+4. Se le hicieron los cambios necesarios al uml como quitar la funcion getStack que no se ocupaba o declarar la clase abstracta.
+5. Se comentaron todos los archivos apropiadamente.
