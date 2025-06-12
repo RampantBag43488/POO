@@ -1,9 +1,30 @@
+/*
+ *
+ * Proyecto inventario main
+ * Inaki Mancera Llano
+ * A01708827
+ * 12/06/2025
+ * version: 1
+ * Este proyecto busca simular el inventario de un videojuego, permite
+ * modificarlo agregando y eliminando items del inventario. AL igual 
+ * que ver que hay en el inventario.
+ */
+
+// bibliotecas con objetos de mi proyecto.
 #include "inventario.h" 
 #include "armadura.h"
 #include "herramienta.h"
 #include "consumible.h"
 #include "bloque.h"
 
+/**
+ * menu muestra las opciones que tiene el usuario para interactuar con el inventario.
+ *
+ * despliega las opciones para que el usuario escoja.
+ *
+ * @param
+ * @return 
+ */
 void menu() {
     cout << "\n--- MENU DEL INVENTARIO ---\n";
     cout << "1. Agregar Herramienta\n";
