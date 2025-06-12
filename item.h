@@ -36,9 +36,8 @@ public:
     void setStack(bool s);
     void setDurabilidad(bool d);
     string getNombre();
-    virtual int getStack(); //método abstracto será sobreescrito
     string getDurabilidad();
-    virtual ~Item() {} //método abstracto será sobreescrito
+    virtual ~Item() {} //método abstracto 
     virtual void verItem() {} //método abstracto será sobreescrito
 };
 
@@ -60,10 +59,6 @@ void Item::setDurabilidad(bool d) {
 
 string Item::getNombre() {
     return Nombre;
-}
-
-int Item::getStack() {
-    return Stack;
 }
 
 string Item::getDurabilidad() {
