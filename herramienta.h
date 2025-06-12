@@ -42,7 +42,7 @@ int Herramienta::getDano() {
 }
 
 /**
- * verItem muestra la informacion general del item en cadena de string.
+ * verItem muestra la informacion general de la herramienta en cadena de string.
  *
  * concatena todos los valores de los atributos en un string para ser impreso
  *
