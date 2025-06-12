@@ -1,6 +1,6 @@
 /*
  *
- * Proyecto inventario clase Herramienta
+ * Proyecto inventario clase Armadura
  * Inaki Mancera Llano
  * A01708827
  * 12/06/2025
