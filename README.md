@@ -13,6 +13,7 @@ Inventario contiene una colección de Items (Agregación).
 - Insertar un objeto que no extienda de Item.
 - En valores booleanos poner un valor distinto a 1 o 0.
 - Poner valores distintos a los pedidos en el menu.
+- Si el usuario crea más de un objeto con el mismo nombre a la hora de agregarlos, cuando se quiera buscar de manera individual solo aparecera el mas cercano al inicio del vector y se eliminara de igual forma primero el que este más al inicio del vector.
 
 El código despliega un menú donde agregar, eliminar y ver todos los items en el inventario o solo uno por busqueda de nombre, se puede crear un nuevo item a la hora de agregarlo.
 El programa corre tanto en la consola como en visual studio code(con las extensiones necesarias instaladas y MinGW) y está hecho con c++ standard por lo que corre en todos los sistemas operativos.
