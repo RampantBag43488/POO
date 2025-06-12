@@ -6,8 +6,7 @@
  * A01708827
  * 12/06/2025
  * version: 1
- * Esta clase defina objeto de tipo Item que contiene las clases heredadas
- * Armadura, Consumible, Herramienta y Bloque.
+ * Esta clase defina objeto de tipo Item que contiene las clase madre para herencia.
  */
 
 
