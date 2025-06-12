@@ -14,7 +14,7 @@
 
 #include "item.h"
 
-//Declaracion del objeto herramienta que hereda de Item
+//Declaracion del objeto bloque que hereda de Item
 class Bloque : public Item {
 
 //Variables de instancia del objeto
